@@ -30,7 +30,7 @@ function MyProvider({ children }) {
       .then((response) => {
         // remove residents pra ter apenas 13 colunas:
         response.results.forEach((obj) => delete obj.residents);
-        setData(response);
+        setData(response.results);
       });
   }, []);
 
@@ -52,24 +52,24 @@ function MyProvider({ children }) {
       const { column, value, comparison } = filters.filterByNumericValues[0];
       switch (comparison) {
       case 'maior que': {
-        const resp = data.results.filter((fil) => Number(fil[column]) > Number(value));
-        setFiltered(resp);
+        const resp = data.filter((fil) => Number(fil[column]) > Number(value));
+        setData(resp);
         break;
       }
       case 'menor que': {
-        const resp = data.results.filter((fil) => Number(fil[column]) < Number(value));
-        setFiltered(resp);
+        const resp = data.filter((fil) => Number(fil[column]) < Number(value));
+        setData(resp);
         break;
       }
       case 'igual a': {
-        const resp = data.results.filter((fil) => Number(fil[column]) === Number(value));
-        setFiltered(resp);
+        const resp = data.filter((fil) => Number(fil[column]) === Number(value));
+        setData(resp);
         break;
       }
       default: console.log('');
       }
     }
-  }, [filters.filterByNumericValues, data, filters]);
+  }, [data, filters.filterByNumericValues]);
 
   // -------------------------------------------------------
   // REMOVE COLUNAS OPTIONS DO SELECT JA USADOS
@@ -80,7 +80,7 @@ function MyProvider({ children }) {
       options.splice(options.indexOf(column), 1);
       setColumnsOptions(options);
     });
-  }, [filters.filterByNumericValues, columnsOptions, filters]);
+  }, [columnsOptions, filters.filterByNumericValues]);
 
   //---------------------------------------------------------
 
@@ -92,6 +92,7 @@ function MyProvider({ children }) {
         filtered,
         columnsOptions,
         setFilters,
+        setFiltered,
         fetchApiPlanets,
         filterByNamePlanet,
       } }

@@ -17,3 +17,8 @@ table td {
   border: 1px solid black;
   color: #0c0c0c;
 }
+
+.filters-list {
+  display: flex;
+  justify-content: space-around;
+}

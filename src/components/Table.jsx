@@ -9,7 +9,7 @@ function Table() {
     return <h3>Carregando...</h3>;
   }
 
-  const renderData = (filtered === undefined ? data.results : filtered);
+  const renderData = (filtered === undefined ? data : filtered);
 
   return (
     <div>
@@ -18,7 +18,7 @@ function Table() {
         <thead>
           <tr>
             {
-              Object.keys(data.results[0]).map((columnData, index) => (
+              Object.keys(data[0]).map((columnData, index) => (
                 <th key={ index }>{columnData}</th>
               ))
             }
