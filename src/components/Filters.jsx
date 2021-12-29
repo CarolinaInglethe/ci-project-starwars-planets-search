@@ -33,8 +33,9 @@ function Filters() {
   }
 
   return (
-    <form>
+    <form className="filter-form">
       <label htmlFor="filterName">
+        Nome
         <input
           type="text"
           id="filterName"
@@ -45,7 +46,7 @@ function Filters() {
 
       {/* Filtragens mais complexas: */}
       <label htmlFor="column">
-        Filtro de Colunas:
+        Coluna:
         <select
           name="column"
           id="column"
