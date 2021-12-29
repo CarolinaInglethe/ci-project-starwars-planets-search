@@ -5,7 +5,7 @@ function FiltersList() {
   const { filters, setFilters, setFiltered } = useContext(MyContext);
   const { filterByNumericValues } = filters;
 
-  const handleClickRemoveFilter = (index, target) => {
+  const handleClickRemoveFilter = (index) => {
     // remove do estado Context e da tela as informaçoes da filtragem:
     const filterArrayRemove = filterByNumericValues.splice(index, 1);
     setFilters({
@@ -22,7 +22,7 @@ function FiltersList() {
       {
         filterByNumericValues.length > 0
           ? filterByNumericValues.map((filter, index) => (
-            <div key={ index } data-testid="filter">
+            <div key={ index } data-testid="filter" className="filter-card">
               <p>{ filter.column }</p>
               <p>{ filter.comparison }</p>
               <p>{ filter.value }</p>

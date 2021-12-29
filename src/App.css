@@ -1,24 +1,58 @@
-.App {
+body {
+  background-image: linear-gradient(205deg, #afafaf 16.67%, #2f3130 66.67%, #151615 100%);
   text-align: center;
 }
 
+header {
+  margin: 10px;
+  padding: 5px;
+}
+
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: medium;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.filter-form input, select, button, label {
+  margin: 2px;
+  padding: 3px;
+}
+
+.filters-list {
+  background-color: #b3b3b359;
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 5px;
+  padding: 10px 5px;
+}
+
+.filter-card {
+  background-color: #ffffffb0;
+  border-radius: 4px;
+  font-size: small;
+  padding: 20px 30px;
+}
+
+
 table {
   border: 1px solid black;
+  font-size: small;
+  margin: 50px 5px;
 }
 
 table th {
   background-color: rgba(75, 75, 109, 0.698);
   border: 1px solid black;
   color: white;
+  padding: 2px;
 }
 
 table td {
   background-color: #f0f0f0;
   border: 1px solid black;
   color: #0c0c0c;
-}
-
-.filters-list {
-  display: flex;
-  justify-content: space-around;
+  padding: 3px;
 }
