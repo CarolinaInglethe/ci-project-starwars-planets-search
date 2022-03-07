@@ -1,11 +1,6 @@
 # Boas vindas ao repositório do projeto Starwars Planets Search em context api e hooks!
- ( Apenas Para Desktop)
-### LINK https://carolinainglethe.github.io/ci-project-starwars-planets-search/
-
 
 # Habilidades
-
-Nesse projeto, você será capaz de:
 
 * Utilizar a _Context API_ do **React** para gerenciar estado.
 * Utilizar o _React Hook useState_;
@@ -15,19 +10,16 @@ Nesse projeto, você será capaz de:
 
 ---
 
-# Requisitos do projeto
+## O que o Projeto faz ?
 
-### 1 - Faça uma requisição para o endpoint `/planets` da API de Star Wars e preencha uma tabela com os dados retornados, com exceção dos da coluna `residents`
+Lista em uma tabela planetas e suas informaçoes, filtra a busca por eles.
 
-### 2 - Filtre a tabela através de um texto, inserido num *campo de texto*, exibindo somente os planetas cujos nomes incluam o texto digitado
+## Como rodar o codigo na maquina?
 
-### 3 - Crie um filtro para valores numéricos
+Assim que o projeto estiver em sua maquina você deve abrir e  :
+-  instalar dependencias : npm intall
+( aviso:  instalaçoes e versoes trabalhadas em uma máquina linux ubunto/mint)
 
-### 4 - Não utilize filtros repetidos
+-  rodar o projeto / abrir no browser: npm start
 
-
-### Bônus
-
-### 6 - Ordene as colunas de forma ascendente ou descendente
-
-
+ ### Projeto no gitbuhPages , link na descriçao do repositório ( seção about )
